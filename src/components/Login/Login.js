@@ -9,7 +9,7 @@ const Login = () => {
             <Fade bottom duration={5000} distance="20px">
                 <div className="login__container -inner">
                     <form className="form" autoComplete="off">
-                        <h2 className="input-header">Sign-In</h2>
+                        <h2 className="header">Sign-In</h2>
                         <div>
                             <label htmlFor="username">Email</label>
                             <input

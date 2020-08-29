@@ -9,14 +9,14 @@ const Register = () => {
             <Fade bottom duration={5000} distance="20px">
                 <div className="register__container-inner">
                     <form className="form" autoComplete="off">
-                        <h2 className="input-header">Sign-Up</h2>
+                        <h2 className="header">Sign-Up</h2>
                         <div>
                             <label htmlFor="username">Full Name</label>
                             <input
                                 required
                                 name="username"
                                 type="text"
-                                className="login-input"
+                                className="register-input"
                                 placeholder="John Doe"
                             />
                         </div>
@@ -26,7 +26,7 @@ const Register = () => {
                                 required
                                 name="username"
                                 type="email"
-                                className="login-input"
+                                className="register-input"
                                 placeholder="user@email.com"
                             />
                         </div>
@@ -35,11 +35,11 @@ const Register = () => {
                             <input
                                 required
                                 type="password"
-                                className="login-input"
+                                className="register-input"
                                 placeholder="password"
                             />
                         </div>
-                        <button className="btn btn-dark login-btn">
+                        <button className="btn btn-dark register-btn">
                             Sign Up
                         </button>
                     </form>
