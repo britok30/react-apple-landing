@@ -29,7 +29,7 @@ const Login = () => {
                                 placeholder="password"
                             />
                         </div>
-                        <button className="btn btn-primary login-btn">
+                        <button className="btn btn-dark login-btn">
                             Sign In
                         </button>
                     </form>
