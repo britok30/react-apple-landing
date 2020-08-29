@@ -20,9 +20,19 @@
         background: #fff;
         padding: 10px;
         box-shadow: 3px 3px 10px rgb(65, 65, 65);
+        border-radius: 3px;
 
         .input-header {
             text-align: center;
+        }
+
+        label {
+            font-weight: 500;
+        }
+
+        ::placeholder {
+            color: rgb(194, 194, 194);
+            font-size: 12px;
         }
 
         .form {
@@ -32,15 +42,17 @@
         .login-input {
             width: 100%;
             box-sizing: border-box;
+            border-radius: 3px;
             outline: none;
-            border: 1px solid #000;
-            margin: 10px 0;
+            border: 1px solid rgb(70, 70, 70);
             padding: 8px;
+            margin: 0 0 10px 0;
         }
 
         .login-btn {
             display: block;
             margin: 10px auto;
+            border-radius: 3px !important;
         }
     }
 }
