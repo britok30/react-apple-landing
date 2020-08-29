@@ -1,13 +1,13 @@
 import React from 'react';
 import Fade from 'react-reveal';
 import { Link } from 'react-router-dom';
-import '../Login/Login.scss';
+import './Register.scss';
 
 const Register = () => {
     return (
-        <div className="outer-container">
+        <div className="register__container-outer">
             <Fade bottom duration={5000} distance="20px">
-                <div className="inner-container">
+                <div className="register__container-inner">
                     <form className="form" autoComplete="off">
                         <h2 className="input-header">Sign-Up</h2>
                         <div>
@@ -15,7 +15,7 @@ const Register = () => {
                             <input
                                 required
                                 name="username"
-                                type="email"
+                                type="text"
                                 className="login-input"
                                 placeholder="John Doe"
                             />
@@ -39,14 +39,14 @@ const Register = () => {
                                 placeholder="password"
                             />
                         </div>
-                        <button className="btn btn-primary login-btn">
+                        <button className="btn btn-dark login-btn">
                             Sign Up
                         </button>
                     </form>
                 </div>
 
                 <div className="sign-up">
-                    Have an account? <Link to="/">Log In</Link>
+                    Already registered? <Link to="/">Log In</Link>
                 </div>
             </Fade>
         </div>

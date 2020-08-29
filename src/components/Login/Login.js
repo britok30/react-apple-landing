@@ -5,11 +5,11 @@ import './Login.scss';
 
 const Login = () => {
     return (
-        <div className="outer-container">
+        <div className="login__container -outer">
             <Fade bottom duration={5000} distance="20px">
-                <div className="inner-container">
+                <div className="login__container -inner">
                     <form className="form" autoComplete="off">
-                        <h2 className="input-header">Login</h2>
+                        <h2 className="input-header">Sign-In</h2>
                         <div>
                             <label htmlFor="username">Email</label>
                             <input
@@ -36,7 +36,7 @@ const Login = () => {
                 </div>
 
                 <div className="sign-up">
-                    Dont have an account? <Link to="/signup">Sign Up</Link>
+                    Not registered? <Link to="/signup">Sign Up</Link>
                 </div>
             </Fade>
         </div>

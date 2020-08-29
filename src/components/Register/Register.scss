@@ -1,0 +1,70 @@
+.register {
+    &__container {
+        &-outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 212, 255, 0.8855917366946778) 0%,
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 1) 100%
+            );
+
+            .sign-up {
+                font-size: 10px;
+                margin-top: 5px;
+            }
+        }
+
+        &-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 380px;
+            height: 430px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 3px 3px 4px rgb(194, 194, 194);
+            border-radius: 3px;
+
+            .input-header {
+                text-align: center;
+                padding-bottom: 20px;
+            }
+
+            label {
+                font-weight: 500;
+            }
+
+            ::placeholder {
+                color: rgb(194, 194, 194);
+                font-size: 12px;
+            }
+
+            .form {
+                width: 300px;
+            }
+
+            .login-input {
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 3px;
+                outline: none;
+                border: 1px solid rgb(70, 70, 70);
+                padding: 8px;
+                margin: 0 0 10px 0;
+            }
+
+            .login-btn {
+                display: block;
+                margin: 10px auto;
+                border-radius: 3px !important;
+                font-size: 12px;
+            }
+        }
+    }
+}

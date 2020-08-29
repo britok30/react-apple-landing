@@ -1,30 +1,40 @@
-.outer-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(
-        to bottom,
-        rgba(0, 212, 255, 0.8855917366946778) 0%,
-        rgba(255, 255, 255, 1) 60%,
-        rgba(255, 255, 255, 1) 100%
-    );
+.login {
+    &__container {
+        &.-outer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 212, 255, 0.8855917366946778) 0%,
+                rgba(255, 255, 255, 1) 60%,
+                rgba(255, 255, 255, 1) 100%
+            );
 
-    .inner-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 350px;
-        height: 400px;
-        background: #fff;
-        padding: 10px;
-        box-shadow: 3px 3px 4px rgb(194, 194, 194);
-        border-radius: 3px;
+            .sign-up {
+                font-size: 10px;
+                margin-top: 5px;
+            }
+        }
+
+        &.-inner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 380px;
+            height: 390px;
+            background: #fff;
+            padding: 10px;
+            box-shadow: 3px 3px 4px rgb(194, 194, 194);
+            border-radius: 3px;
+        }
 
         .input-header {
             text-align: center;
+            padding-bottom: 20px;
         }
 
         label {
@@ -54,11 +64,7 @@
             display: block;
             margin: 10px auto;
             border-radius: 3px !important;
+            font-size: 12px;
         }
-    }
-
-    .sign-up {
-        font-size: 10px;
-        margin-top: 5px;
     }
 }
