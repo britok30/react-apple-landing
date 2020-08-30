@@ -28,6 +28,16 @@
             top: 56%;
             left: 50%;
             transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .counter {
+            font-size: 100px;
+            font-weight: 500;
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 }

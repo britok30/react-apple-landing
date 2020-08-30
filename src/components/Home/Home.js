@@ -2,6 +2,9 @@ import React from 'react';
 import NavbarOne from '../NavbarOne/NavbarOne';
 import './Home.scss';
 import apple from '../../images/apple.png';
+import { Link } from 'react-router-dom';
+import Fade from 'react-reveal';
+import CountUp from 'react-countup';
 
 // import fire from '../../fire';
 // import { useHistory } from 'react-router-dom';
@@ -13,12 +16,23 @@ const Home = () => {
             <NavbarOne />
             <div className="container home__container -outer">
                 <div className="home__container -inner">
-                    <img className="logo" src={apple} alt="logo" />
+                    <Fade top duration={5000} distance="100px">
+                        <Link to="/iphone">
+                            <img className="logo" src={apple} alt="logo" />
+                        </Link>
+                    </Fade>
                 </div>
-                <h2 className="new-products">
-                    New Products Coming This Summer
-                </h2>
-                <p>2020</p>
+                <Fade bottom cascade duration={5000} distance="50px">
+                    <h2 className="new-products">
+                        New Products Coming This Summer
+                    </h2>
+                </Fade>
+                <CountUp
+                    className="counter"
+                    start={1990}
+                    end={2020}
+                    duration={5}
+                />
             </div>
         </div>
     );
