@@ -1,12 +1,33 @@
 import React, { useState } from 'react';
 import Fade from 'react-reveal';
 import { Link } from 'react-router-dom';
+import fire from '../../fire';
 import './Register.scss';
 
 const Register = () => {
     const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+
+    const handleSignUp = () => {
+        fire.auth()
+            .createUserWithEmailAndPassword(email, password)
+            .catch((err) => {
+                switch (err.code) {
+                    case 'auth/email-already-in-use':
+                    case 'auth/invalid-email':
+                        setEmailError(err.message);
+                        break;
+                    case 'auth/weak-password':
+                        setPasswordError(err.message);
+                        break;
+                    default:
+                        console.log('Error');
+                }
+            });
+    };
 
     return (
         <div className="register__container-outer">
