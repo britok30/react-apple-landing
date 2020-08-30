@@ -1,7 +1,7 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import NavbarOne from '../NavbarOne/NavbarOne';
 import './Home.scss';
-import Fade from 'react-reveal';
+import apple from '../../images/apple.png';
 
 // import fire from '../../fire';
 // import { useHistory } from 'react-router-dom';
@@ -10,13 +10,16 @@ import Fade from 'react-reveal';
 const Home = () => {
     return (
         <div>
-            <nav className="navbar">
-                <Link className="navbar-brand" to="/iphone">
-                    <Fade bottom duration={5000} distance="20px">
-                        <ion-icon name="logo-apple"></ion-icon>
-                    </Fade>
-                </Link>
-            </nav>
+            <NavbarOne />
+            <div className="container home__container -outer">
+                <div className="home__container -inner">
+                    <img className="logo" src={apple} alt="logo" />
+                </div>
+                <h2 className="new-products">
+                    New Products Coming This Summer
+                </h2>
+                <p>2020</p>
+            </div>
         </div>
     );
 };
