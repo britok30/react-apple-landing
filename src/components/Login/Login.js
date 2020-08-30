@@ -38,7 +38,7 @@ const Login = () => {
                     autoDismiss: true,
                 });
 
-                history.push('/home');
+                history.push('/comingsoon');
             })
             .catch((err) => {
                 switch (err.code) {

@@ -1,0 +1,43 @@
+.home {
+    &__container {
+        &.-outer {
+            max-width: 1300px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 93vh;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(
+                to bottom,
+                rgba(0, 212, 255, 0.8855917366946778) 0,
+                rgba(255, 255, 255, 1) 70%,
+                rgba(255, 255, 255, 1) 100%
+            );
+        }
+
+        &.-inner {
+            .logo {
+                width: 250px;
+            }
+        }
+
+        .new-products {
+            font-size: 14px;
+            position: absolute;
+            top: 56%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .counter {
+            font-size: 100px;
+            font-weight: 500;
+            position: absolute;
+            bottom: 1%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}

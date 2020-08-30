@@ -6,7 +6,7 @@ const NavbarOne = () => {
     return (
         <div>
             <nav className="navbar">
-                <Link className="navbar-brand" to="/iphone">
+                <Link className="navbar-brand" to="/home">
                     <ion-icon name="logo-apple"></ion-icon>
                 </Link>
             </nav>
