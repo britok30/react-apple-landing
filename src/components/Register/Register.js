@@ -63,25 +63,19 @@ const Register = () => {
             });
     };
 
-    const authListener = () => {
-        fire.auth().onAuthStateChanged((user) => {
+    useEffect(() => {
+        const unsubscribe = fire.auth().onAuthStateChanged((user) => {
             if (user) {
                 clearInputs();
                 setUser(user);
             } else {
                 setUser('');
-                setEmail('');
-                setPassword('');
             }
         });
-    };
 
-    useEffect(() => {
-        const ac = new AbortController();
-
-        authListener();
-
-        return () => ac.abort();
+        return () => {
+            unsubscribe();
+        };
     }, []);
 
     return (

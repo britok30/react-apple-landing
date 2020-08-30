@@ -11,6 +11,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
+    const [didMount, setDidMount] = useState(false);
     const { addToast } = useToasts();
     const history = useHistory();
 
@@ -63,8 +64,8 @@ const Login = () => {
             });
     };
 
-    const authListener = () => {
-        fire.auth().onAuthStateChanged((user) => {
+    useEffect(() => {
+        const unsubscribe = fire.auth().onAuthStateChanged((user) => {
             if (user) {
                 clearInputs();
                 setUser(user);
@@ -72,14 +73,10 @@ const Login = () => {
                 setUser('');
             }
         });
-    };
 
-    useEffect(() => {
-        const ac = new AbortController();
-
-        authListener();
-
-        return () => ac.abort();
+        return () => {
+            unsubscribe();
+        };
     }, []);
 
     return (
