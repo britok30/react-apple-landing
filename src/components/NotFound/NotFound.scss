@@ -1,0 +1,14 @@
+.not-found {
+    &__container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+        .header {
+            font-weight: 300;
+            font-size: 15px;
+            letter-spacing: 5px;
+        }
+    }
+}
