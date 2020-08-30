@@ -30,42 +30,47 @@
             padding: 10px;
             box-shadow: 3px 3px 4px rgb(194, 194, 194);
             border-radius: 3px;
-        }
 
-        .header {
-            text-align: center;
-            padding-bottom: 20px;
-        }
+            .header {
+                text-align: center;
+                padding-bottom: 20px;
+            }
 
-        label {
-            font-weight: 500;
-        }
+            label {
+                font-weight: 500;
+            }
 
-        ::placeholder {
-            color: rgb(194, 194, 194);
-            font-size: 12px;
-        }
+            ::placeholder {
+                color: rgb(194, 194, 194);
+                font-size: 12px;
+            }
 
-        .form {
-            width: 300px;
-        }
+            .form {
+                width: 300px;
+            }
 
-        .login-input {
-            width: 100%;
-            box-sizing: border-box;
-            border-radius: 3px;
-            outline: none;
-            border: 1px solid rgb(70, 70, 70);
-            padding: 8px;
-            margin: 0 0 10px 0;
-        }
+            .login-input {
+                width: 100%;
+                box-sizing: border-box;
+                border-radius: 3px;
+                outline: none;
+                border: 1px solid rgb(70, 70, 70);
+                padding: 8px;
+                margin: 0 0 10px 0;
+            }
 
-        .login-btn {
-            display: block;
-            margin: 10px auto;
-            width: 100px;
-            border-radius: 3px !important;
-            font-size: 12px;
+            .login-btn {
+                display: block;
+                margin: 10px auto;
+                width: 100px;
+                border-radius: 3px !important;
+                font-size: 12px;
+            }
+
+            .errorMsg {
+                font-size: 10px;
+                color: red;
+            }
         }
     }
 }

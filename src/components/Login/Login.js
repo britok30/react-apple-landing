@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import fire from '../../fire';
 import './Login.scss';
 
@@ -10,7 +10,7 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [hasAccount, setHasAccount] = useState(false);
+    let history = useHistory();
 
     const clearInputs = () => {
         setEmail('');
@@ -22,7 +22,10 @@ const Login = () => {
         setPasswordError('');
     };
 
-    const handleLogin = () => {
+    const handleLogin = (e) => {
+        e.preventDefault();
+        console.log('Logged In');
+
         clearErrors();
 
         fire.auth()
@@ -43,10 +46,6 @@ const Login = () => {
             });
     };
 
-    // const handleLogOut = () => {
-    //     fire.auth().signOut()
-    // }
-
     const authListener = () => {
         fire.auth().onAuthStateChanged((user) => {
             if (user) {
@@ -62,11 +61,6 @@ const Login = () => {
         authListener();
     }, []);
 
-    const onSignIn = (e) => {
-        e.preventDefault();
-        console.log('Logged in');
-    };
-
     return (
         <div className="login__container -outer">
             <Fade bottom duration={5000} distance="20px">
@@ -74,7 +68,7 @@ const Login = () => {
                     <form
                         className="form"
                         autoComplete="off"
-                        onSubmit={onSignIn}
+                        onSubmit={handleLogin}
                     >
                         <h2 className="header">Sign-In</h2>
                         <div>
@@ -90,6 +84,7 @@ const Login = () => {
                                     setEmail(e.target.value);
                                 }}
                             />
+                            <p className="errorMsg">{emailError}</p>
                         </div>
                         <div>
                             <label htmlFor="password">Password</label>
@@ -103,10 +98,11 @@ const Login = () => {
                                     setPassword(e.target.value);
                                 }}
                             />
+                            <p className="errorMsg">{passwordError}</p>
                         </div>
                         <button
                             className="btn btn-dark login-btn"
-                            onSubmit={onSignIn}
+                            onClick={handleLogin}
                         >
                             Sign In
                         </button>
