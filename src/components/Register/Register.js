@@ -11,7 +11,19 @@ const Register = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
 
+    const clearInputs = () => {
+        setEmail('');
+        setPassword('');
+    };
+
+    const clearErrors = () => {
+        setEmailError('');
+        setPasswordError('');
+    };
+
     const handleSignUp = () => {
+        clearErrors();
+
         fire.auth()
             .createUserWithEmailAndPassword(email, password)
             .catch((err) => {
@@ -29,11 +41,20 @@ const Register = () => {
             });
     };
 
+    const onSignUp = (e) => {
+        e.preventDefault();
+        console.log('Signed up');
+    };
+
     return (
         <div className="register__container-outer">
             <Fade bottom duration={5000} distance="20px">
                 <div className="register__container-inner">
-                    <form className="form" autoComplete="off">
+                    <form
+                        className="form"
+                        autoComplete="off"
+                        onSubmit={onSignUp}
+                    >
                         <h2 className="header">Sign-Up</h2>
                         <div>
                             <label htmlFor="user">Full Name</label>
@@ -72,7 +93,10 @@ const Register = () => {
                                 onChange={(e) => setPassword(e.target.value)}
                             />
                         </div>
-                        <button className="btn btn-dark register-btn">
+                        <button
+                            className="btn btn-dark register-btn"
+                            onSubmit={onSignUp}
+                        >
                             Sign Up
                         </button>
                     </form>

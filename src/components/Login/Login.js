@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal';
 import { Link } from 'react-router-dom';
 import fire from '../../fire';
@@ -12,7 +12,19 @@ const Login = () => {
     const [passwordError, setPasswordError] = useState('');
     const [hasAccount, setHasAccount] = useState(false);
 
+    const clearInputs = () => {
+        setEmail('');
+        setPassword('');
+    };
+
+    const clearErrors = () => {
+        setEmailError('');
+        setPasswordError('');
+    };
+
     const handleLogin = () => {
+        clearErrors();
+
         fire.auth()
             .signInWithEmailAndPassword(email, password)
             .catch((err) => {
@@ -31,11 +43,39 @@ const Login = () => {
             });
     };
 
+    // const handleLogOut = () => {
+    //     fire.auth().signOut()
+    // }
+
+    const authListener = () => {
+        fire.auth().onAuthStateChanged((user) => {
+            if (user) {
+                clearInputs();
+                setUser(user);
+            } else {
+                setUser('');
+            }
+        });
+    };
+
+    useEffect(() => {
+        authListener();
+    }, []);
+
+    const onSignIn = (e) => {
+        e.preventDefault();
+        console.log('Logged in');
+    };
+
     return (
         <div className="login__container -outer">
             <Fade bottom duration={5000} distance="20px">
                 <div className="login__container -inner">
-                    <form className="form" autoComplete="off">
+                    <form
+                        className="form"
+                        autoComplete="off"
+                        onSubmit={onSignIn}
+                    >
                         <h2 className="header">Sign-In</h2>
                         <div>
                             <label htmlFor="email">Email</label>
@@ -64,7 +104,10 @@ const Login = () => {
                                 }}
                             />
                         </div>
-                        <button className="btn btn-dark login-btn">
+                        <button
+                            className="btn btn-dark login-btn"
+                            onSubmit={onSignIn}
+                        >
                             Sign In
                         </button>
                     </form>
