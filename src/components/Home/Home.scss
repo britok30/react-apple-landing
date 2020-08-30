@@ -1,0 +1,15 @@
+.navbar {
+    background: #000;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+
+    .navbar-brand {
+        color: #fff;
+        font-size: 30px;
+    }
+
+    .navbar-brand:hover {
+        color: #fff;
+    }
+}
