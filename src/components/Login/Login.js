@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import Fade from 'react-reveal';
 import { Link } from 'react-router-dom';
+import fire from '../../fire';
 import './Login.scss';
 
 const Login = () => {
+    const [user, setUser] = useState('');
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [emailError, setEmailError] = useState('');
+    const [passwordError, setPasswordError] = useState('');
+    const [hasAccount, setHasAccount] = useState(false);
+
+    const handleLogin = () => {
+        fire.auth().signInWithEmailAndPassword()
+    };
 
     return (
         <div className="login__container -outer">
