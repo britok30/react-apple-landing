@@ -10,9 +10,9 @@ function App() {
     return (
         <Router>
             <div className="App">
-                <Route path="/home" exact={true} component={Home}></Route>
-                <Route path="/" exact={true} component={Login}></Route>
                 <ToastProvider>
+                    <Route path="/home" exact={true} component={Home}></Route>
+                    <Route path="/" exact={true} component={Login}></Route>
                     <Route
                         path="/signup"
                         exact={true}

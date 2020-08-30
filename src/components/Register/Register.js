@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import fire from '../../fire';
 import { useToasts } from 'react-toast-notifications';
 import './Register.scss';
@@ -13,6 +13,7 @@ const Register = () => {
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
     const { addToast } = useToasts();
+    const history = useHistory();
 
     const clearInputs = () => {
         setName('');
@@ -36,6 +37,8 @@ const Register = () => {
                     appearance: 'success',
                     autoDismiss: true,
                 });
+
+                history.push('/');
             })
             .catch((err) => {
                 switch (err.code) {
@@ -67,12 +70,18 @@ const Register = () => {
                 setUser(user);
             } else {
                 setUser('');
+                setEmail('');
+                setPassword('');
             }
         });
     };
 
     useEffect(() => {
+        const ac = new AbortController();
+
         authListener();
+
+        return () => ac.abort();
     }, []);
 
     return (
@@ -89,6 +98,7 @@ const Register = () => {
                             <label htmlFor="user">Full Name</label>
                             <input
                                 required
+                                autoComplete="off"
                                 name="user"
                                 type="text"
                                 value={name}
@@ -103,6 +113,7 @@ const Register = () => {
                             <label htmlFor="email">Email</label>
                             <input
                                 required
+                                autoComplete="off"
                                 name="email"
                                 type="email"
                                 value={email}
@@ -116,6 +127,7 @@ const Register = () => {
                             <label htmlFor="password">Password</label>
                             <input
                                 required
+                                autoComplete="off"
                                 type="password"
                                 className="register-input"
                                 placeholder="password"

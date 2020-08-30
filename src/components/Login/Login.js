@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal';
 import { Link, useHistory } from 'react-router-dom';
+import { useToasts } from 'react-toast-notifications';
 import fire from '../../fire';
 import './Login.scss';
 
@@ -10,7 +11,8 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    let history = useHistory();
+    const { addToast } = useToasts();
+    const history = useHistory();
 
     const clearInputs = () => {
         setEmail('');
@@ -24,21 +26,36 @@ const Login = () => {
 
     const handleLogin = (e) => {
         e.preventDefault();
-        console.log('Logged In');
 
         clearErrors();
 
         fire.auth()
             .signInWithEmailAndPassword(email, password)
+            .then(() => {
+                addToast(`Welcome! ${email}`, {
+                    appearance: 'success',
+                    autoDismiss: true,
+                });
+
+                history.push('/home');
+            })
             .catch((err) => {
                 switch (err.code) {
                     case 'auth/invalid-email':
                     case 'auth/user-disabled':
                     case 'auth/user-not-found':
                         setEmailError(err.message);
+                        addToast(err.message, {
+                            appearance: 'error',
+                            autoDismiss: true,
+                        });
                         break;
                     case 'auth/wrong-password':
                         setPasswordError(err.message);
+                        addToast(err.message, {
+                            appearance: 'error',
+                            autoDismiss: true,
+                        });
                         break;
                     default:
                         console.log('Error');
@@ -58,7 +75,11 @@ const Login = () => {
     };
 
     useEffect(() => {
+        const ac = new AbortController();
+
         authListener();
+
+        return () => ac.abort();
     }, []);
 
     return (
@@ -75,6 +96,7 @@ const Login = () => {
                             <label htmlFor="email">Email</label>
                             <input
                                 required
+                                autoComplete="off"
                                 name="email"
                                 type="email"
                                 value={email}
@@ -90,6 +112,7 @@ const Login = () => {
                             <label htmlFor="password">Password</label>
                             <input
                                 required
+                                autoComplete="off"
                                 type="password"
                                 className="login-input"
                                 placeholder="password"
