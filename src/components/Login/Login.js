@@ -11,7 +11,6 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [emailError, setEmailError] = useState('');
     const [passwordError, setPasswordError] = useState('');
-    const [didMount, setDidMount] = useState(false);
     const { addToast } = useToasts();
     const history = useHistory();
 

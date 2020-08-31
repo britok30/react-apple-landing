@@ -6,8 +6,6 @@ import { Link } from 'react-router-dom';
 import Fade from 'react-reveal';
 import CountUp from 'react-countup';
 
-
-
 const Home = () => {
     return (
         <div>
@@ -37,18 +35,3 @@ const Home = () => {
 };
 
 export default Home;
-
-//   <button
-//       onClick={() => {
-//           handleLogOut();
-
-//           addToast(`Logged out`, {
-//               appearance: 'success',
-//               autoDismiss: true,
-//           });
-
-//           history.push('/');
-//       }}
-//   >
-//       logout
-//   </button>;

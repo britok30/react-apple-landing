@@ -6,6 +6,14 @@ import { useHistory } from 'react-router-dom';
 import { useToasts } from 'react-toast-notifications';
 
 const MainNavbar = () => {
+    const history = useHistory();
+
+    const handleLogOut = () => {
+        fire.auth().signOut();
+    };
+
+    const { addToast } = useToasts();
+
     return (
         <div>
             <nav class="navbar navbar-expand-lg">
@@ -37,7 +45,21 @@ const MainNavbar = () => {
                         <button class="btn btn-primary notify-btn">
                             Notify Me
                         </button>
-                        <button class="btn btn-dark logout-btn">Log Out</button>
+                        <button
+                            onClick={() => {
+                                handleLogOut();
+
+                                addToast(`Logged out`, {
+                                    appearance: 'success',
+                                    autoDismiss: true,
+                                });
+
+                                history.push('/');
+                            }}
+                            class="btn btn-dark logout-btn"
+                        >
+                            Log Out
+                        </button>
                     </div>
                 </div>
             </nav>
