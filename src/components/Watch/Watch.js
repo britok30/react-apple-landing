@@ -40,13 +40,18 @@ const Watch = () => {
 
             <div className="description">
                 <Fade bottom cascade duration={3000} distance="20px">
-                    <h2 className="watch__title -red">Apple Watch</h2>
-                    <h1 className="watch__title -main">The ultimate iPhone</h1>
-                    <p className="watch__description">
-                        The future is here. Join the iPhone Upgrade Program to
-                        get the latest iPhone - NOW!
-                    </p>
-                    <p className="watch__date -red">{`Start shipping ${date}`}</p>
+                    <div className="content-container">
+                        <h2 className="watch__title -red">Apple Watch</h2>
+                        <h1 className="watch__title -main">
+                            Change starts within
+                        </h1>
+                        <p className="watch__description">
+                            Apple Watch Series 4. Fundamentally redesigned and
+                            re-engineered to help you be even more active,
+                            healthy, and connected.
+                        </p>
+                        <p className="watch__date -red">{`Starts shipping ${date}`}</p>
+                    </div>
                 </Fade>
             </div>
 
@@ -61,8 +66,10 @@ const Watch = () => {
             </div>
 
             <div className="price">
-                <h2 className="watch__price">From $699</h2>
-                <p className="watch__buy">Buy Now &#62; </p>
+                <Fade left cascade duration={5000} distance="20px">
+                    <h2 className="watch__price">From $699</h2>
+                    <p className="watch__buy">Buy Now &#62; </p>
+                </Fade>
             </div>
 
             <div className="display-phones">

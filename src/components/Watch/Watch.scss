@@ -11,7 +11,7 @@
             background: linear-gradient(
                 to right,
                 rgba(242, 243, 244, 1) 0%,
-                rgb(245, 244, 244) 10%,
+                rgb(255, 255, 255) 50%,
                 rgba(255, 255, 255, 1) 100%
             );
         }
@@ -27,7 +27,7 @@
 
 .description {
     position: absolute;
-    width: 350px;
+    width: 400px;
     top: 18%;
     left: 9%;
 
@@ -38,6 +38,7 @@
                 font-weight: 700;
                 font-size: 15px;
                 margin-bottom: 25px;
+                word-wrap: break-word;
             }
 
             &.-main {
@@ -60,12 +61,12 @@
 
 .main-image {
     position: absolute;
-    width: 350px;
+    width: 300px;
     top: 18%;
-    right: 5%;
+    right: 20%;
 
     .watch-black {
-        width: 280px;
+        width: 500px;
     }
 }
 

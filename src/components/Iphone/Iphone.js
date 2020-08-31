@@ -40,13 +40,17 @@ const Iphone = () => {
 
             <div className="description">
                 <Fade bottom cascade duration={3000} distance="20px">
-                    <h2 className="iphone__title -red">iPhone</h2>
-                    <h1 className="iphone__title -main">The ultimate iPhone</h1>
-                    <p className="iphone__description">
-                        The future is here. Join the iPhone Upgrade Program to
-                        get the latest iPhone - NOW!
-                    </p>
-                    <p className="iphone__date -red">{`Start shipping ${date}`}</p>
+                    <div className="content-container">
+                        <h2 className="iphone__title -red">iPhone</h2>
+                        <h1 className="iphone__title -main">
+                            The ultimate iPhone
+                        </h1>
+                        <p className="iphone__description">
+                            The future is here. Join the iPhone Upgrade Program
+                            to get the latest iPhone - NOW!
+                        </p>
+                        <p className="iphone__date -red">{`Starts shipping ${date}`}</p>
+                    </div>
                 </Fade>
             </div>
 
@@ -61,8 +65,10 @@ const Iphone = () => {
             </div>
 
             <div className="price">
-                <h2 className="iphone__price">From $699</h2>
-                <p className="iphone__buy">Buy Now &#62; </p>
+                <Fade left cascade duration={5000} distance="20px">
+                    <h2 className="iphone__price">From $699</h2>
+                    <p className="iphone__buy">Buy Now &#62; </p>
+                </Fade>
             </div>
 
             <div className="display-phones">
