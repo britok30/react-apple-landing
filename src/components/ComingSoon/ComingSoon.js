@@ -1,19 +1,17 @@
 import React from 'react';
-import NavbarOne from '../NavbarOne/NavbarOne';
+import SecondaryNavbar from '../SecondaryNavbar/SecondaryNavbar';
 import './ComingSoon.scss';
 import apple from '../../images/apple.png';
 import { Link } from 'react-router-dom';
 import Fade from 'react-reveal';
 import CountUp from 'react-countup';
 
-// import fire from '../../fire';
-// import { useHistory } from 'react-router-dom';
-// import { useToasts } from 'react-toast-notifications';
+
 
 const Home = () => {
     return (
         <div>
-            <NavbarOne />
+            <SecondaryNavbar />
             <div className="container home__container -outer">
                 <div className="home__container -inner">
                     <Fade top duration={5000} distance="100px">

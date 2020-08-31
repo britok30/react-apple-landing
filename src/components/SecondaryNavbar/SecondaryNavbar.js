@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './NavbarOne.scss';
+import './SecondaryNavbar.scss';
 
-const NavbarOne = () => {
+const SecondaryNavbar = () => {
     return (
         <div>
-            <nav className="navbar">
-                <Link className="navbar-brand" to="/home">
+            <nav className="nav__container">
+                <Link className="brand" to="/home">
                     <ion-icon name="logo-apple"></ion-icon>
                 </Link>
             </nav>
@@ -14,4 +14,4 @@ const NavbarOne = () => {
     );
 };
 
-export default NavbarOne;
+export default SecondaryNavbar;
