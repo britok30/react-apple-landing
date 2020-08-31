@@ -67,7 +67,7 @@ const Watch = () => {
             <div className="main-image">
                 <Fade right duration={3000} distance="20px">
                     <img
-                        className="watch-black"
+                        className="watch-black animate"
                         src={selected}
                         alt="watchBlack"
                     />
@@ -82,7 +82,7 @@ const Watch = () => {
             </div>
 
             <div className="display-watch">
-                <Fade bottom duration={5000} distance="20px">
+                <Fade bottom duration={5000} distance="20pxs">
                     <div className="white">
                         <ion-icon
                             onClick={() => {

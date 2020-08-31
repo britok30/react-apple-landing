@@ -15,18 +15,21 @@
         color: #fff;
     }
 
-    .active {
-        font-weight: bold;
-    }
-
     .nav-link {
-        color: rgb(148, 148, 148);
+        color: #000;
+        opacity: 0.6;
         transition: ease all 0.4s;
         margin: 0 20px;
     }
 
+    .active {
+        font-weight: bold;
+        color: #000 !important;
+        opacity: 1;
+    }
+
     .nav-link:hover {
-        color: #000;
+        opacity: 1;
     }
 
     .notify-btn {
