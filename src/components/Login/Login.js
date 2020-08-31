@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Fade from 'react-reveal';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { useToasts } from 'react-toast-notifications';
 import fire from '../../fire';
 import './Login.scss';
@@ -13,6 +13,7 @@ const Login = () => {
     const [passwordError, setPasswordError] = useState('');
     const { addToast } = useToasts();
     const history = useHistory();
+    let location = useLocation();
 
     const clearInputs = () => {
         setEmail('');
@@ -68,10 +69,20 @@ const Login = () => {
             if (user) {
                 clearInputs();
                 setUser(user);
+
+                let currentPathname = location.pathname;
+                if (currentPathname === '/' || currentPathname === '/signup') {
+                    history.push('/home');
+                }
             } else {
                 setUser('');
+                history.push('/');
             }
         });
+
+        // window.addEventListener('popstate', () => {
+        //     history.go(1);
+        // });
 
         return () => {
             unsubscribe();
