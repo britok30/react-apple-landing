@@ -1,0 +1,35 @@
+.home {
+    &__container {
+        &.-outer {
+            max-width: 1321px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 93vh;
+            background: rgb(255, 255, 255);
+            background: linear-gradient(
+                to right,
+                rgba(0, 212, 255, 0.8855917366946778) 0,
+                rgba(255, 255, 255, 1) 70%,
+                rgba(255, 255, 255, 1) 100%
+            );
+        }
+
+        &.-inner {
+            .logo {
+                width: 250px;
+            }
+        }
+
+        .welcome {
+            font-size: 50px;
+            font-weight: 700;
+            position: absolute;
+            top: 56%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+    }
+}

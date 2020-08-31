@@ -10,8 +10,8 @@ const Home = () => {
     return (
         <div>
             <SecondaryNavbar />
-            <div className="container home__container -outer">
-                <div className="home__container -inner">
+            <div className="container cs__container -outer">
+                <div className="cs__container -inner">
                     <Fade top duration={5000} distance="100px">
                         <Link to="/home">
                             <img className="logo" src={apple} alt="logo" />
