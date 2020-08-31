@@ -7,13 +7,35 @@ Some key features about the app:
 
 Authentication is handled by Firebase. Handles specific errors if user makes a mistake and/or isn't registered. Notifications (react-toast-notifications) will appear to indicate status of authentication
 
-## Styling with SCSS
+## React Hooks
 
-This app is completely styled with SCSS. 
+I used React Hooks to manage all the state functionaities in the app.
+
+## SCSS
+
+This app is completely styled with SCSS. BEM conventions were used. 
 
 ## Git 
 
 All code was submitted using git commands.
+
+## React-Reveal
+
+React Reveal was used for animations.
+
+## Axios 
+
+Axios was used to retrieve dates from the api provided.
+
+## Note
+
+The app was not fully completed.
+
+That includes: 
+
+- Macbook page
+- Watch Page
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
