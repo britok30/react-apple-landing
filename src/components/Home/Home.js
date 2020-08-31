@@ -14,9 +14,7 @@ const Home = () => {
                 <div className="container home__container -outer">
                     <div className="home__container -inner">
                         <Fade top duration={5000} distance="100px">
-                            <Link to="/home">
-                                <img className="logo" src={apple} alt="logo" />
-                            </Link>
+                            <img className="logo" src={apple} alt="logo" />
                         </Fade>
                     </div>
                     <Fade bottom cascade duration={5000} distance="50px">
