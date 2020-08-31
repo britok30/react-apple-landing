@@ -36,5 +36,34 @@
             font-size: 13px;
             color: rgba(0, 212, 255, 0.886);
         }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+
+            > li {
+                display: inline-block;
+                margin: 0 20px;
+            }
+
+            .iphone-logo {
+                width: 20px;
+                opacity: 0.5;
+            }
+
+            .macbook-logo {
+                width: 23px;
+                opacity: 0.5;
+            }
+
+            .watch-logo {
+                width: 15px;
+                opacity: 0.5;
+            }
+        }
     }
 }
