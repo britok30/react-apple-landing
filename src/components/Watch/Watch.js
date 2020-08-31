@@ -82,29 +82,31 @@ const Watch = () => {
             </div>
 
             <div className="display-watch">
-                <div className="white">
-                    <ion-icon
-                        onClick={() => {
-                            setSelected(watches.appleWatchWhite);
-                        }}
-                        className="w-circle"
-                        name="ellipse-outline"
-                    ></ion-icon>
-                    <p>White</p>
-                </div>
-                <div className="black">
-                    <ion-icon
-                        onClick={() => {
-                            setSelected(watches.appleWatch);
-                        }}
-                        className="b-circle"
-                        name="ellipse"
-                    ></ion-icon>
-                    <p>Black</p>
-                </div>
+                <Fade bottom duration={5000} distance="20px">
+                    <div className="white">
+                        <ion-icon
+                            onClick={() => {
+                                setSelected(watches.appleWatchWhite);
+                            }}
+                            className="w-circle"
+                            name="ellipse-outline"
+                        ></ion-icon>
+                        <p>White</p>
+                    </div>
+                    <div className="black">
+                        <ion-icon
+                            onClick={() => {
+                                setSelected(watches.appleWatch);
+                            }}
+                            className="b-circle"
+                            name="ellipse"
+                        ></ion-icon>
+                        <p>Black</p>
+                    </div>
+                </Fade>
             </div>
 
-            <div className="iphone-list">
+            <div className="watch-list">
                 <Fade right cascade>
                     <ul>
                         <li className="icon">
