@@ -3,6 +3,8 @@ import MainNavbar from '../../components/MainNavbar/MainNavbar';
 import apple from '../../images/logogrey.svg';
 import Fade from 'react-reveal';
 import mainIphone from '../../images/Iphone 1@2x.png';
+import miniPhone2 from '../../images/apple-iphonexs-max-gold-back-3@2x.png';
+import miniPhone1 from '../../images/apple-iphonexs-max-gold@2x.png';
 import axios from 'axios';
 import './Iphone.scss';
 
@@ -69,11 +71,6 @@ const Iphone = () => {
                     <h2 className="iphone__price">From $699</h2>
                     <p className="iphone__buy">Buy Now &#62; </p>
                 </Fade>
-            </div>
-
-            <div className="display-phones">
-                <img src="" alt="" />
-                <img src="" alt="" />
             </div>
         </div>
     );

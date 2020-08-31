@@ -72,7 +72,22 @@ const Watch = () => {
                 </Fade>
             </div>
 
-            <div className="display-watch"></div>
+            <div className="display-watch">
+                <div className="white">
+                    <ion-icon
+                        className="white-circle"
+                        name="ellipse-outline"
+                    ></ion-icon>
+                    <p>White</p>
+                </div>
+                <div className="black">
+                    <ion-icon
+                        className="black-circle"
+                        name="ellipse"
+                    ></ion-icon>
+                    <p>Black</p>
+                </div>
+            </div>
         </div>
     );
 };
