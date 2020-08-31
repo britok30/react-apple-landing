@@ -68,3 +68,23 @@
         width: 280px;
     }
 }
+
+.price {
+    position: absolute;
+    width: 350px;
+    bottom: 18%;
+    left: 9%;
+
+    .iphone {
+        &__price {
+            color: rgb(179, 179, 179);
+            font-weight: 700;
+        }
+
+        &__buy {
+            color: red;
+            font-weight: 500;
+            font-size: 10px;
+        }
+    }
+}

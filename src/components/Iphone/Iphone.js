@@ -56,7 +56,7 @@ const Iphone = () => {
 
             <div className="price">
                 <h2 className="iphone__price">From $699</h2>
-                <p className="iphone__buy">Buy Now</p>
+                <p className="iphone__buy">Buy Now &#62; </p>
             </div>
 
             <div className="display-phones">
