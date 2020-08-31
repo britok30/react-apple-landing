@@ -20,10 +20,12 @@ const Home = () => {
                         </Fade>
                     </div>
                     <Fade bottom cascade duration={5000} distance="50px">
-                        <h1 className="welcome">
-                            Welcome to Apple
-                        </h1>
+                        <h1 className="welcome">Welcome to Apple</h1>
                     </Fade>
+
+                    <Link className="products" to="/iphone">
+                        <Fade bottom>See Our Products </Fade>
+                    </Link>
                 </div>
             </div>
         </div>

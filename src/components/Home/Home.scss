@@ -9,9 +9,9 @@
             height: 93vh;
             background: rgb(255, 255, 255);
             background: linear-gradient(
-                to right,
-                rgba(0, 212, 255, 0.8855917366946778) 0,
-                rgba(255, 255, 255, 1) 70%,
+                90deg,
+                rgba(242, 243, 244, 1) 0%,
+                rgba(241, 241, 241, 1) 50%,
                 rgba(255, 255, 255, 1) 100%
             );
         }
@@ -30,6 +30,11 @@
             left: 50%;
             transform: translate(-50%, -50%);
             text-align: center;
+        }
+
+        .products {
+            font-size: 13px;
+            color: rgba(0, 212, 255, 0.886);
         }
     }
 }
