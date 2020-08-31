@@ -5,11 +5,11 @@ Some key features about the app:
 
 ## Features Firebase for Auth
 
-Authentication is handled by Firebase. Handles specific errors if user makes a mistake and/or isn't registered. Notifications (react-toast-notifications) will appear to indicate status of authentication
+Authentication is handled by Firebase. Handles specific errors if user makes a mistake and/or isn't registered. Notifications (react-toast-notifications) will appear to indicate status of authentication. Routes are protected and users cannot manually redirect themselves.
 
 ## React Hooks
 
-I used React Hooks to manage all the state functionaities in the app.
+I used React Hooks to manage all the state functionaities in the app. React-router-dom was also implemented with hooks.
 
 ## SCSS
 
@@ -17,11 +17,7 @@ This app is completely styled with SCSS. BEM conventions were used.
 
 ## Git 
 
-All code was submitted using git commands.
-
-## React-Reveal
-
-React Reveal was used for animations.
+All code was submitted using git version control.
 
 ## Axios 
 
