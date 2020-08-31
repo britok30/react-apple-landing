@@ -9,7 +9,7 @@ Authentication is handled by Firebase. Handles specific errors if user makes a m
 
 ## React Hooks
 
-I used React Hooks to manage all the state functionaities in the app.
+I used React Hooks to manage all the state functionaities in the app. React-router-dom was also implemented with hooks.
 
 ## SCSS
 
@@ -17,7 +17,7 @@ This app is completely styled with SCSS. BEM conventions were used.
 
 ## Git 
 
-All code was submitted using git commands.
+All code was submitted using git version control.
 
 ## Axios 
 
