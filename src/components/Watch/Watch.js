@@ -72,10 +72,7 @@ const Watch = () => {
                 </Fade>
             </div>
 
-            <div className="display-phones">
-                <img src="" alt="" />
-                <img src="" alt="" />
-            </div>
+            <div className="display-watch"></div>
         </div>
     );
 };
