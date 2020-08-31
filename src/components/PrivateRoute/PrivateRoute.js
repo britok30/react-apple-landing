@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import fire from '../../fire';
 
-export const PrivateRoute = ({ component: Component, ...rest }) => {
+export const PrivateRoute = ({ component: Component, authed, ...rest }) => {
     const [user, setUser] = useState('');
 
     useEffect(() => {
