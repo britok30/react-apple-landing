@@ -1,3 +1,20 @@
+# BOALT 
+This project was created as a demo for Boalt.
+
+Some key features about the app:
+
+## Features Firebase for Auth
+
+Authentication is handled by Firebase. Handles specific errors if user makes a mistake and/or isn't registered. Notifications (react-toast-notifications) will appear to indicate status of authentication
+
+## Styling with SCSS
+
+This app is completely styled with SCSS. 
+
+## Git 
+
+All code was submitted using git commands.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
