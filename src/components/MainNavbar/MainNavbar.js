@@ -53,9 +53,6 @@ const MainNavbar = ({ iphone, macbook, watch }) => {
                                     Watch
                                 </Link>
                             </li>
-                            <button className="btn btn-primary notify-btn">
-                                Notify Me
-                            </button>
                             <button
                                 onClick={() => {
                                     handleLogOut();
@@ -67,9 +64,9 @@ const MainNavbar = ({ iphone, macbook, watch }) => {
 
                                     history.push('/');
                                 }}
-                                className="btn btn-dark logout-btn"
+                                className="btn btn-primary notify-btn"
                             >
-                                Log Out
+                                Notify Me
                             </button>
                         </ul>
                     </Fade>

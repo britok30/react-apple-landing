@@ -54,16 +54,31 @@
             .iphone-logo {
                 width: 20px;
                 opacity: 0.5;
+                transition: ease all 0.5s;
+            }
+
+            .iphone-logo:hover {
+                transform: scale(1.12);
             }
 
             .macbook-logo {
                 width: 23px;
                 opacity: 0.5;
+                transition: ease all 0.5s;
+            }
+
+            .macbook-logo:hover {
+                transform: scale(1.12);
             }
 
             .watch-logo {
                 width: 15px;
                 opacity: 0.5;
+                transition: ease all 0.5s;
+            }
+
+            .watch-logo:hover {
+                transform: scale(1.12);
             }
         }
     }

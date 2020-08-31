@@ -6,6 +6,8 @@ import Home from './components/Home/Home';
 import Iphone from './components/Iphone/Iphone';
 import NotFound from './components/NotFound/NotFound';
 import Register from './components/Register/Register';
+import Watch from './components/Watch/Watch';
+import Macbook from './components/Macbook/Macbook';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ToastProvider } from 'react-toast-notifications';
 import { PrivateRoute } from './components/PrivateRoute/PrivateRoute';
@@ -36,6 +38,16 @@ function App() {
                             path="/iphone"
                             exact={true}
                             component={Iphone}
+                        ></PrivateRoute>
+                        <PrivateRoute
+                            path="/macbook"
+                            exact={true}
+                            component={Macbook}
+                        ></PrivateRoute>
+                        <PrivateRoute
+                            path="/watch"
+                            exact={true}
+                            component={Watch}
                         ></PrivateRoute>
                     </ToastProvider>
                     <Route path="*" component={NotFound}></Route>

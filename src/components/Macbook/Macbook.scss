@@ -1,0 +1,17 @@
+.macbook-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 93vh;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.438), rgba(0, 0, 0, 0.445)),
+        url(../../images/mac-hero.jpg) no-repeat center center/cover;
+
+    .macbook {
+        &__header {
+            font-size: 50px;
+            color: #fff;
+            font-weight: 700;
+            text-align: center;
+        }
+    }
+}
