@@ -23,30 +23,6 @@
             }
         }
     }
-
-    &__title {
-        &.-red {
-            color: red;
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 25px;
-        }
-
-        &.-main {
-            font-weight: 700;
-            font-size: 50px;
-            margin-bottom: 25px;
-        }
-    }
-
-    &__description {
-        color: rgb(161, 161, 161);
-    }
-
-    &__date {
-        color: red;
-        font-size: 10px;
-    }
 }
 
 .description {
@@ -54,6 +30,32 @@
     width: 350px;
     top: 18%;
     left: 9%;
+
+    .iphone {
+        &__title {
+            &.-red {
+                color: red;
+                font-weight: 700;
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            &.-main {
+                font-weight: 700;
+                font-size: 50px;
+                margin-bottom: 25px;
+            }
+        }
+
+        &__description {
+            color: rgb(161, 161, 161);
+        }
+
+        &__date {
+            color: red;
+            font-size: 10px;
+        }
+    }
 }
 
 .main-image {

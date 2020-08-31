@@ -33,7 +33,7 @@ const Iphone = () => {
             </div>
 
             <div className="description">
-                <Fade bottom cascade duration={5000}>
+                <Fade bottom cascade duration={3000} distance="20px">
                     <h2 className="iphone__title -red">iPhone</h2>
                     <h1 className="iphone__title -main">The ultimate iPhone</h1>
                     <p className="iphone__description">
@@ -45,13 +45,23 @@ const Iphone = () => {
             </div>
 
             <div className="main-image">
-                <Fade right duration={5000}>
+                <Fade right duration={3000} distance="20px">
                     <img
                         className="iphone-gold"
                         src={mainIphone}
                         alt="mainIphone"
                     />
                 </Fade>
+            </div>
+
+            <div className="price">
+                <h2 className="iphone__price">From $699</h2>
+                <p className="iphone__buy">Buy Now</p>
+            </div>
+
+            <div className="display-phones">
+                <img src="" alt="" />
+                <img src="" alt="" />
             </div>
         </div>
     );

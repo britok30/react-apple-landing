@@ -4,6 +4,7 @@ import './MainNavbar.scss';
 import fire from '../../fire';
 import { useHistory } from 'react-router-dom';
 import { useToasts } from 'react-toast-notifications';
+import Fade from 'react-reveal';
 
 const MainNavbar = ({ iphone, macbook, watch }) => {
     const history = useHistory();
@@ -35,41 +36,43 @@ const MainNavbar = ({ iphone, macbook, watch }) => {
                     className="collapse navbar-collapse"
                     id="navbarNavAltMarkup"
                 >
-                    <ul className="navbar-nav ml-auto">
-                        <li className={`nav-item ${iphone}`}>
-                            <Link className="nav-link" to="/iphone">
-                                iPhone
-                            </Link>
-                        </li>
-                        <li className={`nav-item ${macbook}`}>
-                            <Link className="nav-link" to="/macbook">
-                                Macbook Pro
-                            </Link>
-                        </li>
-                        <li className={`nav-item ${watch}`}>
-                            <Link className="nav-link" to="/watch">
-                                Watch
-                            </Link>
-                        </li>
-                        <button className="btn btn-primary notify-btn">
-                            Notify Me
-                        </button>
-                        <button
-                            onClick={() => {
-                                handleLogOut();
+                    <Fade top cascade>
+                        <ul className="navbar-nav ml-auto">
+                            <li className={`nav-item ${iphone}`}>
+                                <Link className="nav-link" to="/iphone">
+                                    iPhone
+                                </Link>
+                            </li>
+                            <li className={`nav-item ${macbook}`}>
+                                <Link className="nav-link" to="/macbook">
+                                    Macbook Pro
+                                </Link>
+                            </li>
+                            <li className={`nav-item ${watch}`}>
+                                <Link className="nav-link" to="/watch">
+                                    Watch
+                                </Link>
+                            </li>
+                            <button className="btn btn-primary notify-btn">
+                                Notify Me
+                            </button>
+                            <button
+                                onClick={() => {
+                                    handleLogOut();
 
-                                addToast(`Logged out`, {
-                                    appearance: 'success',
-                                    autoDismiss: true,
-                                });
+                                    addToast(`Logged out`, {
+                                        appearance: 'success',
+                                        autoDismiss: true,
+                                    });
 
-                                history.push('/');
-                            }}
-                            className="btn btn-dark logout-btn"
-                        >
-                            Log Out
-                        </button>
-                    </ul>
+                                    history.push('/');
+                                }}
+                                className="btn btn-dark logout-btn"
+                            >
+                                Log Out
+                            </button>
+                        </ul>
+                    </Fade>
                 </div>
             </nav>
         </div>

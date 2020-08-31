@@ -25,9 +25,9 @@ const Home = () => {
                 </Fade>
                 <CountUp
                     className="counter"
-                    start={1990}
+                    start={1976}
                     end={2020}
-                    duration={5}
+                    duration={6}
                 />
             </div>
         </div>
