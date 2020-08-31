@@ -5,7 +5,7 @@ import fire from '../../fire';
 import { useHistory } from 'react-router-dom';
 import { useToasts } from 'react-toast-notifications';
 
-const MainNavbar = () => {
+const MainNavbar = ({ iphone, macbook, watch }) => {
     const history = useHistory();
 
     const handleLogOut = () => {
@@ -16,12 +16,12 @@ const MainNavbar = () => {
 
     return (
         <div>
-            <nav class="navbar navbar-expand-lg">
-                <Link class="navbar-brand" to="/comingsoon">
+            <nav className="navbar navbar-expand-lg">
+                <Link className="navbar-brand" to="/comingsoon">
                     <ion-icon name="logo-apple"></ion-icon>
                 </Link>
                 <button
-                    class="navbar-toggler"
+                    className="navbar-toggler"
                     type="button"
                     data-toggle="collapse"
                     data-target="#navbarNavAltMarkup"
@@ -29,20 +29,29 @@ const MainNavbar = () => {
                     aria-expanded="false"
                     aria-label="Toggle navigation"
                 >
-                    <span class="navbar-toggler-icon"></span>
+                    <span className="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav ml-auto">
-                        <Link class="nav-link" to="/iphone">
-                            iPhone
-                        </Link>
-                        <Link class="nav-link" to="/macbook">
-                            Macbook Pro
-                        </Link>
-                        <Link class="nav-link" to="/watch">
-                            Watch
-                        </Link>
-                        <button class="btn btn-primary notify-btn">
+                <div
+                    className="collapse navbar-collapse"
+                    id="navbarNavAltMarkup"
+                >
+                    <ul className="navbar-nav ml-auto">
+                        <li className={`nav-item ${iphone}`}>
+                            <Link className="nav-link" to="/iphone">
+                                iPhone
+                            </Link>
+                        </li>
+                        <li className={`nav-item ${macbook}`}>
+                            <Link className="nav-link" to="/macbook">
+                                Macbook Pro
+                            </Link>
+                        </li>
+                        <li className={`nav-item ${watch}`}>
+                            <Link className="nav-link" to="/watch">
+                                Watch
+                            </Link>
+                        </li>
+                        <button className="btn btn-primary notify-btn">
                             Notify Me
                         </button>
                         <button
@@ -56,11 +65,11 @@ const MainNavbar = () => {
 
                                 history.push('/');
                             }}
-                            class="btn btn-dark logout-btn"
+                            className="btn btn-dark logout-btn"
                         >
                             Log Out
                         </button>
-                    </div>
+                    </ul>
                 </div>
             </nav>
         </div>

@@ -9,16 +9,17 @@
             height: 93vh;
             background: rgb(255, 255, 255);
             background: linear-gradient(
-                90deg,
+                to right,
                 rgba(242, 243, 244, 1) 0%,
-                rgba(241, 241, 241, 1) 50%,
+                rgb(245, 244, 244) 30%,
                 rgba(255, 255, 255, 1) 100%
             );
         }
 
         &.-inner {
             .logo {
-                width: 250px;
+                width: 200px;
+                opacity: 0.2 !important;
             }
         }
 

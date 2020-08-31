@@ -1,0 +1,68 @@
+.iphone {
+    &__container {
+        &.-outer {
+            max-width: 1321px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+            background: #fff;
+            background: linear-gradient(
+                to right,
+                rgba(242, 243, 244, 1) 0%,
+                rgb(245, 244, 244) 10%,
+                rgba(255, 255, 255, 1) 100%
+            );
+        }
+
+        &.-inner {
+            .logo {
+                width: 200px;
+                opacity: 0.2 !important;
+            }
+        }
+    }
+
+    &__title {
+        &.-red {
+            color: red;
+            font-weight: 700;
+            font-size: 15px;
+            margin-bottom: 25px;
+        }
+
+        &.-main {
+            font-weight: 700;
+            font-size: 50px;
+            margin-bottom: 25px;
+        }
+    }
+
+    &__description {
+        color: rgb(161, 161, 161);
+    }
+
+    &__date {
+        color: red;
+        font-size: 10px;
+    }
+}
+
+.description {
+    position: absolute;
+    width: 350px;
+    top: 18%;
+    left: 9%;
+}
+
+.main-image {
+    position: absolute;
+    width: 350px;
+    top: 18%;
+    right: 5%;
+
+    .iphone-gold {
+        width: 280px;
+    }
+}
