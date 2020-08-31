@@ -5,7 +5,7 @@ import fire from '../../fire';
 export const PrivateRoute = ({ component: Component, authed, ...rest }) => {
     const [user, setUser] = useState('');
     const history = useHistory();
-    const location = useLocation();
+    const location = useLocation()
 
     useEffect(() => {
         const unsubscribe = fire.auth().onAuthStateChanged((user) => {
@@ -17,7 +17,7 @@ export const PrivateRoute = ({ component: Component, authed, ...rest }) => {
                 }
             } else {
                 setUser('');
-                history.push('/');
+                history.push('/')
             }
         });
 

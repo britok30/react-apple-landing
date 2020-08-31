@@ -33,7 +33,7 @@ const Register = () => {
         fire.auth()
             .createUserWithEmailAndPassword(email, password)
             .then(() => {
-                addToast('Sign Up Successful. Please log in!', {
+                addToast('Sign Up Successful!', {
                     appearance: 'success',
                     autoDismiss: true,
                 });
