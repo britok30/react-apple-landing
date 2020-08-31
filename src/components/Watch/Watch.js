@@ -3,11 +3,20 @@ import MainNavbar from '../../components/MainNavbar/MainNavbar';
 import apple from '../../images/logogrey.svg';
 import Fade from 'react-reveal';
 import appleWatch from '../../images/Black Watch-1@2x.png';
+import appleWatchWhite from '../../images/White Watch-2@2x.png';
 import axios from 'axios';
+
+import { Link } from 'react-router-dom';
+import iphonelogo from '../../images/iphone.jpg';
+import macbooklogo from '../../images/macbook.svg';
+import watchlogo from '../../images/iwatch.png';
 import './Watch.scss';
+
+const watches = { appleWatch, appleWatchWhite };
 
 const Watch = () => {
     const [date, setDate] = useState('');
+    const [selected, setSelected] = useState(watches.appleWatch);
 
     const getDate = async () => {
         const url =
@@ -59,7 +68,7 @@ const Watch = () => {
                 <Fade right duration={3000} distance="20px">
                     <img
                         className="watch-black"
-                        src={appleWatch}
+                        src={selected}
                         alt="watchBlack"
                     />
                 </Fade>
@@ -75,18 +84,58 @@ const Watch = () => {
             <div className="display-watch">
                 <div className="white">
                     <ion-icon
-                        className="white-circle"
+                        onClick={() => {
+                            setSelected(watches.appleWatchWhite);
+                        }}
+                        className="w-circle"
                         name="ellipse-outline"
                     ></ion-icon>
                     <p>White</p>
                 </div>
                 <div className="black">
                     <ion-icon
-                        className="black-circle"
+                        onClick={() => {
+                            setSelected(watches.appleWatch);
+                        }}
+                        className="b-circle"
                         name="ellipse"
                     ></ion-icon>
                     <p>Black</p>
                 </div>
+            </div>
+
+            <div className="iphone-list">
+                <Fade right cascade>
+                    <ul>
+                        <li className="icon">
+                            <Link to="/iphone">
+                                <img
+                                    className="iphone-logo"
+                                    src={iphonelogo}
+                                    alt="iphonelogo"
+                                />
+                            </Link>
+                        </li>
+                        <li className="icon">
+                            <Link to="/macbook">
+                                <img
+                                    className="macbook-logo"
+                                    src={macbooklogo}
+                                    alt="macbooklogo"
+                                />
+                            </Link>
+                        </li>
+                        <li className="icon">
+                            <Link to="/watch">
+                                <img
+                                    className="watch-logo"
+                                    src={watchlogo}
+                                    alt="watchlogo"
+                                />
+                            </Link>
+                        </li>
+                    </ul>
+                </Fade>
             </div>
         </div>
     );

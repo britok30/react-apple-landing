@@ -3,10 +3,13 @@ import MainNavbar from '../../components/MainNavbar/MainNavbar';
 import apple from '../../images/logogrey.svg';
 import Fade from 'react-reveal';
 import mainIphone from '../../images/Iphone 1@2x.png';
-import miniPhone2 from '../../images/apple-iphonexs-max-gold-back-3@2x.png';
-import miniPhone1 from '../../images/apple-iphonexs-max-gold@2x.png';
 import axios from 'axios';
 import './Iphone.scss';
+
+import { Link } from 'react-router-dom';
+import iphonelogo from '../../images/iphone.jpg';
+import macbooklogo from '../../images/macbook.svg';
+import watchlogo from '../../images/iwatch.png';
 
 const Iphone = () => {
     const [date, setDate] = useState('');
@@ -70,6 +73,40 @@ const Iphone = () => {
                 <Fade left cascade duration={5000} distance="20px">
                     <h2 className="iphone__price">From $699</h2>
                     <p className="iphone__buy">Buy Now &#62; </p>
+                </Fade>
+            </div>
+
+            <div className="iphone-list">
+                <Fade right cascade>
+                    <ul>
+                        <li className="icon">
+                            <Link to="/iphone">
+                                <img
+                                    className="iphone-logo"
+                                    src={iphonelogo}
+                                    alt="iphonelogo"
+                                />
+                            </Link>
+                        </li>
+                        <li className="icon">
+                            <Link to="/macbook">
+                                <img
+                                    className="macbook-logo"
+                                    src={macbooklogo}
+                                    alt="macbooklogo"
+                                />
+                            </Link>
+                        </li>
+                        <li className="icon">
+                            <Link to="/watch">
+                                <img
+                                    className="watch-logo"
+                                    src={watchlogo}
+                                    alt="watchlogo"
+                                />
+                            </Link>
+                        </li>
+                    </ul>
                 </Fade>
             </div>
         </div>
