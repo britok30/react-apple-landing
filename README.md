@@ -27,14 +27,15 @@ React Reveal was used for animations.
 
 Axios was used to retrieve dates from the api provided.
 
-## Note
+## Notes
 
 The app was not fully completed.
 
 That includes: 
 
-- Macbook page
-- Watch Page
+- Macbook page (made a replacement page)
+- Mobile responsiveness (need to implement media queries for mobile platforms)
+- Image transitions for iPhone
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
