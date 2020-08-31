@@ -9,11 +9,11 @@ import './Iphone.scss';
 const Iphone = () => {
     const [date, setDate] = useState('');
 
-    useEffect(() => {
+    const getDate = async () => {
         const url =
             'https://cors-anywhere.herokuapp.com/https://boalt-interview.herokuapp.com/api/shipping-dates';
 
-        axios
+        const data = await axios
             .get(url)
             .then((res) => {
                 setDate(res.data.iphone);
@@ -21,6 +21,12 @@ const Iphone = () => {
             .catch((err) => {
                 console.log(err);
             });
+
+        return data;
+    };
+
+    useEffect(() => {
+        getDate();
     }, []);
 
     return (

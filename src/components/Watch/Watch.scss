@@ -1,21 +1,90 @@
-.watch-text {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 93vh;
-    background: linear-gradient(
-            to right,
-            rgba(0, 0, 0, 0.438),
-            rgba(0, 0, 0, 0.445)
-        ),
-        url(../../images/watch-hero.jpg) no-repeat center center/cover;
+.watch {
+    &__container {
+        &.-outer {
+            max-width: 1321px !important;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+            background: #fff;
+            background: linear-gradient(
+                to right,
+                rgba(242, 243, 244, 1) 0%,
+                rgb(245, 244, 244) 10%,
+                rgba(255, 255, 255, 1) 100%
+            );
+        }
+
+        &.-inner {
+            .logo {
+                width: 200px;
+                opacity: 0.2 !important;
+            }
+        }
+    }
+}
+
+.description {
+    position: absolute;
+    width: 350px;
+    top: 18%;
+    left: 9%;
 
     .watch {
-        &__header {
-            font-size: 50px;
-            color: #fff;
+        &__title {
+            &.-red {
+                color: red;
+                font-weight: 700;
+                font-size: 15px;
+                margin-bottom: 25px;
+            }
+
+            &.-main {
+                font-weight: 700;
+                font-size: 50px;
+                margin-bottom: 25px;
+            }
+        }
+
+        &__description {
+            color: rgb(161, 161, 161);
+        }
+
+        &__date {
+            color: red;
+            font-size: 10px;
+        }
+    }
+}
+
+.main-image {
+    position: absolute;
+    width: 350px;
+    top: 18%;
+    right: 5%;
+
+    .watch-black {
+        width: 280px;
+    }
+}
+
+.price {
+    position: absolute;
+    width: 350px;
+    bottom: 18%;
+    left: 9%;
+
+    .watch {
+        &__price {
+            color: rgb(179, 179, 179);
             font-weight: 700;
-            text-align: center;
+        }
+
+        &__buy {
+            color: red;
+            font-weight: 500;
+            font-size: 10px;
         }
     }
 }
