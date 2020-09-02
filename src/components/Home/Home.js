@@ -14,7 +14,7 @@ const Home = () => {
     return (
         <div>
             <MainNavbar />
-            <div className="container home__container -outer">
+            <div className="container-fluid home__container -outer">
                 <div className="home__container -inner">
                     <img className="logo" src={apple} alt="logo" />
                 </div>

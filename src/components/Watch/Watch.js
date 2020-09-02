@@ -41,7 +41,7 @@ const Watch = () => {
     return (
         <div>
             <MainNavbar watch="active" />
-            <div className="container iphone__container -outer">
+            <div className="container-fluid iphone__container -outer">
                 <div className="iphone__container -inner">
                     <img className="logo" src={apple} alt="logo" />
                 </div>

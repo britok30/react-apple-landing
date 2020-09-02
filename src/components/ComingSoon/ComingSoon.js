@@ -10,7 +10,7 @@ const Home = () => {
     return (
         <div>
             <SecondaryNavbar />
-            <div className="container cs__container -outer">
+            <div className="container-fluid cs__container -outer">
                 <div className="cs__container -inner">
                     <Fade top duration={5000} distance="100px">
                         <Link to="/home">

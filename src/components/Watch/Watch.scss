@@ -1,7 +1,7 @@
 .watch {
     &__container {
         &.-outer {
-            max-width: 1321px !important;
+            // max-width: 1321px !important;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -159,12 +159,11 @@
             opacity: 1;
             transition: ease all 0.5s;
         }
-
     }
 }
 
 //Transtion
 
 .animate {
-  transition: transform .35s ease-in-out;
+    transition: transform 0.35s ease-in-out;
 }
