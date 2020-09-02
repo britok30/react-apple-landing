@@ -1,5 +1,5 @@
-# BOALT 
-This project was created as a demo for Boalt.
+# react-apple-landing
+This project was created as a demo.
 
 Some key features about the app:
 
@@ -22,17 +22,6 @@ All code was submitted using git version control.
 ## Axios 
 
 Axios was used to retrieve dates from the api provided.
-
-## Notes
-
-The app was not fully completed.
-
-That includes: 
-
-- Macbook page (made a replacement page)
-- Mobile responsiveness (need to implement media queries for mobile platforms)
-- Image transitions for iPhone
-
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
